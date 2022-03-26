@@ -47,7 +47,7 @@ SandboxVars = {
     -- 9 = September
     -- 10 = October
     -- 11 = November
-    StartMonth = 7,
+    StartMonth = 6,
     StartDay = 9,
     -- 1 = 7 AM
     -- 2 = 9 AM
@@ -146,12 +146,12 @@ SandboxVars = {
     -- 2 = Fast (50 Days)
     -- 3 = Normal (100 Days)
     -- 4 = Slow (200 Days)
-    ErosionSpeed = 3,
+    ErosionSpeed = 5,
     -- Number of days until 100% growth. -1 means no growth. Zero means use the Erosion Speed option. Maximum 36,500 (100 years). Minimum=-1 Maximum=36500 Default=0
     ErosionDays = 0,
-    -- Modifies the base XP gain from actions by this number. Minimum=0.00 Maximum=1000.00 Default=1.00
-    XpMultiplier = 2.5,
-    -- Use this to multiply or reduce engine general loudness. Minimum=0.00 Maximum=100.00 Default=1.00
+    -- Modifies the base XP gain from actions by this number. Minimum=0,00 Maximum=1000,00 Default=1,00
+    XpMultiplier = 3.0,
+    -- Use this to multiply or reduce engine general loudness. Minimum=0,00 Maximum=100,00 Default=1,00
     ZombieAttractionMultiplier = 1.0,
     -- Governs whether cars are locked, need keys to start etc.
     VehicleEasyUse = false,
@@ -221,7 +221,7 @@ SandboxVars = {
     SeenHoursPreventLootRespawn = 0,
     -- A comma-separated list of item types that will be removed after HoursForWorldItemRemoval hours.
     WorldItemRemovalList = "Base.Vest,Base.Shirt,Base.Blouse,Base.Skirt,Base.Shoes,Base.Hat,Base.Glasses",
-    -- Number of hours since an item was dropped on the ground before it is removed.  Items are removed the next time that part of the map is loaded.  Zero means items are not removed. Minimum=0.00 Maximum=2147483647.00 Default=24.00
+    -- Number of hours since an item was dropped on the ground before it is removed.  Items are removed the next time that part of the map is loaded.  Zero means items are not removed. Minimum=0,00 Maximum=2147483647,00 Default=24,00
     HoursForWorldItemRemoval = 24.0,
     -- If true, any items *not* in WorldItemRemovalList will be removed.
     ItemRemovalListBlacklistToggle = false,
@@ -276,7 +276,7 @@ SandboxVars = {
     -- 3 = Sometimes
     -- 4 = Often
     GeneratorSpawning = 3,
-    -- How much fuel is consumed per in-game hour. Minimum=0.00 Maximum=100.00 Default=1.00
+    -- How much fuel is consumed per in-game hour. Minimum=0,00 Maximum=100,00 Default=1,00
     GeneratorFuelConsumption = 1.0,
     -- Increase/decrease probability of discovering randomized safe houses on the map: either burnt out, containing loot stashes, dead survivor bodies etc.
     -- 1 = Never
@@ -329,7 +329,7 @@ SandboxVars = {
     InjurySeverity = 2,
     -- Enable or disable broken limbs when survivors receive injuries from impacts, zombie damage and falls.
     BoneFracture = true,
-    -- How long before zombie bodies disappear. Minimum=-1.00 Maximum=2147483647.00 Default=216.00
+    -- How long before zombie bodies disappear. Minimum=-1,00 Maximum=2147483647,00 Default=216,00
     HoursForCorpseRemoval = 216.0,
     -- Governs impact that nearby decaying bodies has on the player's health and emotions.
     -- 1 = None
@@ -397,7 +397,7 @@ SandboxVars = {
     -- 6 = Very High
     -- 7 = Full
     FuelStationGas = 4,
-    -- How gas-hungry vehicles on the map are. Minimum=0.00 Maximum=100.00 Default=1.00
+    -- How gas-hungry vehicles on the map are. Minimum=0,00 Maximum=100,00 Default=1,00
     CarGasConsumption = 1.0,
     -- 1 = Never
     -- 2 = Extremely Rare
@@ -434,7 +434,7 @@ SandboxVars = {
     CarAlarm = 2,
     -- Enable or disable player getting damage from being in a car accident.
     PlayerDamageFromCrash = true,
-    -- How many in-game hours before a wailing siren shuts off. Minimum=0.00 Maximum=168.00 Default=0.00
+    -- How many in-game hours before a wailing siren shuts off. Minimum=0,00 Maximum=168,00 Default=0,00
     SirenShutoffHours = 0.0,
     --  Governs whether player can discover a car that has been maintained and cared for after the infection struck.
     -- 1 = Low
@@ -527,25 +527,25 @@ SandboxVars = {
         -- When enabled if multiple zombies are attacking they can drag you down to feed. Dependent on zombie strength.
         ZombiesDragDown = true,
         -- When enabled zombies will have a chance to lunge after climbing over a fence if you're too close.
-        ZombiesFenceLunge = true,
+        ZombiesFenceLunge = false,
     },
     ZombieConfig = {
-        -- Set by the "Zombie Count" population option. 4.0 = Insane, Very High = 3.0, 2.0 = High, 1.0 = Normal, 0.35 = Low, 0.0 = None. Minimum=0.00 Maximum=4.00 Default=1.00
+        -- Set by the "Zombie Count" population option. 4.0 = Insane, Very High = 3.0, 2.0 = High, 1.0 = Normal, 0.35 = Low, 0.0 = None. Minimum=0,00 Maximum=4,00 Default=1,00
         PopulationMultiplier = 1.0,
-        -- Adjusts the desired population at the start of the game. Minimum=0.00 Maximum=4.00 Default=1.00
+        -- Adjusts the desired population at the start of the game. Minimum=0,00 Maximum=4,00 Default=1,00
         PopulationStartMultiplier = 1.0,
-        -- Adjusts the desired population on the peak day. Minimum=0.00 Maximum=4.00 Default=1.50
-        PopulationPeakMultiplier = 1.5,
+        -- Adjusts the desired population on the peak day. Minimum=0,00 Maximum=4,00 Default=1,50
+        PopulationPeakMultiplier = 1.4,
         -- The day when the population reaches it's peak. Minimum=1 Maximum=365 Default=28
-        PopulationPeakDay = 28,
-        -- The number of hours that must pass before zombies may respawn in a cell. If zero, spawning is disabled. Minimum=0.00 Maximum=8760.00 Default=72.00
-        RespawnHours = 72.0,
-        -- The number of hours that a chunk must be unseen before zombies may respawn in it. Minimum=0.00 Maximum=8760.00 Default=16.00
-        RespawnUnseenHours = 24.0,
-        -- The fraction of a cell's desired population that may respawn every RespawnHours. Minimum=0.00 Maximum=1.00 Default=0.10
-        RespawnMultiplier = 0.05,
-        -- The number of hours that must pass before zombies migrate to empty parts of the same cell. If zero, migration is disabled. Minimum=0.00 Maximum=8760.00 Default=12.00
-        RedistributeHours = 16.0,
+        PopulationPeakDay = 35,
+        -- The number of hours that must pass before zombies may respawn in a cell. If zero, spawning is disabled. Minimum=0,00 Maximum=8760,00 Default=72,00
+        RespawnHours = 168.0,
+        -- The number of hours that a chunk must be unseen before zombies may respawn in it. Minimum=0,00 Maximum=8760,00 Default=16,00
+        RespawnUnseenHours = 72.0,
+        -- The fraction of a cell's desired population that may respawn every RespawnHours. Minimum=0,00 Maximum=1,00 Default=0,10
+        RespawnMultiplier = 0.01,
+        -- The number of hours that must pass before zombies migrate to empty parts of the same cell. If zero, migration is disabled. Minimum=0,00 Maximum=8760,00 Default=12,00
+        RedistributeHours = 48.0,
         -- The distance a zombie will try to walk towards the last sound it heard. Minimum=10 Maximum=1000 Default=100
         FollowSoundDistance = 100,
         -- The size of groups real zombies form when idle. Zero means zombies don't form groups. Groups don't form inside buildings or forest zones. Minimum=0 Maximum=1000 Default=20
